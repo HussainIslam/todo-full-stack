@@ -1,0 +1,23 @@
+.form{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.inputField{
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid black;
+    width: 30%;
+}
+
+.inputField:focus{
+    outline: none;
+}
+
+.addIcon{
+    height: 40px;
+    width: 40px;
+    margin: 0;
+}
