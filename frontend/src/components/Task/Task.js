@@ -16,11 +16,11 @@ const Task = ({ task, index, toggleTask, deleteTask }) => {
                 className={Style.checkbox}
             />
             <div className={Style.taskNameContainer}>
-                <div>
+                <div className={Style.nameInnerContainer}>
                     <div>{task.name}</div>
-                    <div>
-                        <div>{moment(task.added, "YYYY-MM-DDTHH:mm:ss.SSSSSSZ").fromNow()}</div>
-                        <div>{moment(task.modified, "YYYY-MM-DDTHH:mm:ss.SSSSSSZ").fromNow()}</div>
+                    <div className={Style.timeContainer}>
+                        <div>added: {moment(task.added, "YYYY-MM-DDTHH:mm:ss.SSSSSSZ").fromNow()}</div>
+                        <div>modified: {moment(task.modified, "YYYY-MM-DDTHH:mm:ss.SSSSSSZ").fromNow()}</div>
                     </div>
 
                 </div>

@@ -25,3 +25,16 @@
 .closeButton{
     color: purple;
 }
+
+.nameInnerContainer *{
+}
+
+.timeContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.timeContainer *{
+    font-size: 0.7rem;
+    color: lightgray;
+}
