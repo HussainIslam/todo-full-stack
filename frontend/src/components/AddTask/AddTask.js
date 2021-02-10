@@ -27,6 +27,7 @@ const AddTask = ({ addTask }) => {
                 name="newtask" 
                 className={Style.inputField}
                 onKeyDown={handleKeyDown}
+                placeholder="enter task here"
             />
             <IconContext.Provider value={{ className:"addIcon" }}>
                 <FaPlusSquare 
