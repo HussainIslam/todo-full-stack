@@ -10,11 +10,24 @@ const AddTask = ({ addTask }) => {
             addTask(form.newtask.value)
             form.newtask.value = ""
         }
+        
+    }
+
+    const handleKeyDown = (e) => {
+        if(e.keyCode === 13){
+            e.preventDefault();
+            formSubmit()
+        }
     }
 
     return (
         <form className={ Style.form } id="addform">
-            <input type="text" name="newtask" className={Style.inputField}/>
+            <input 
+                type="text" 
+                name="newtask" 
+                className={Style.inputField}
+                onKeyDown={handleKeyDown}
+            />
             <IconContext.Provider value={{ className:"addIcon" }}>
                 <FaPlusSquare 
                     className={Style.addIcon}
