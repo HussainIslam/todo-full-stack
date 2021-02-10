@@ -15,7 +15,14 @@ const Task = ({ task, index, toggleTask, deleteTask }) => {
                 className={Style.checkbox}
             />
             <div className={Style.taskNameContainer}>
-                <div>{task.name}</div>
+                <div>
+                    <div>{task.name}</div>
+                    <div>
+                        <div>{task.added}</div>
+                        <div>{task.modified}</div>
+                    </div>
+
+                </div>
                 <div className={Style.closeButton} onClick={()=>deleteTask(task.id)}>
                     <IconContext.Provider value={{ className: "closeButton" }}>
                         <FaTrashAlt/>
