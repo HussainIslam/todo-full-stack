@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { FaTrashAlt } from 'react-icons/fa'
+import { IconContext } from 'react-icons'
 
 import Style from './Task.module.css'
 
@@ -15,7 +16,11 @@ const Task = ({ task, index, toggleTask, deleteTask }) => {
             />
             <div className={Style.taskNameContainer}>
                 <div>{task.name}</div>
-                <div className={Style.closeButton} onClick={()=>deleteTask(task.id)}><FaTrashAlt/></div>
+                <div className={Style.closeButton} onClick={()=>deleteTask(task.id)}>
+                    <IconContext.Provider value={{ className: "closeButton" }}>
+                        <FaTrashAlt/>
+                    </IconContext.Provider>
+                </div>
             </div>
         </div>
     )

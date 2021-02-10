@@ -1,6 +1,6 @@
 .taskContainer{
     width: 40vw;
-    border: 1px solid red;
+    border: 1px solid lightgray;
     margin: 5px auto;
     padding: 20px 30px;
     display: flex;
@@ -20,4 +20,8 @@
 
 .closeButton:hover{
     cursor: pointer;
+}
+
+.closeButton{
+    color: purple;
 }
