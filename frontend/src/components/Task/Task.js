@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { FaTrashAlt } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
+import moment from 'moment'
 
 import Style from './Task.module.css'
 
@@ -18,8 +19,8 @@ const Task = ({ task, index, toggleTask, deleteTask }) => {
                 <div>
                     <div>{task.name}</div>
                     <div>
-                        <div>{task.added}</div>
-                        <div>{task.modified}</div>
+                        <div>{moment(task.added, "YYYY-MM-DDTHH:mm:ss.SSSSSSZ").fromNow()}</div>
+                        <div>{moment(task.modified, "YYYY-MM-DDTHH:mm:ss.SSSSSSZ").fromNow()}</div>
                     </div>
 
                 </div>
