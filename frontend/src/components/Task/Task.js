@@ -32,6 +32,7 @@ const Task = ({ task, index, toggleTask, deleteTask, updateTask }) => {
                         contentEditable={editableRef}
                         html={task.name}
                         disabled={false}
+                        style={{ outline: 'none' }}
                     />
                     <div className={Style.timeContainer}>
                         <div>added: {moment(task.added, "YYYY-MM-DDTHH:mm:ss.SSSSSSZ").fromNow()}, &nbsp;</div>
