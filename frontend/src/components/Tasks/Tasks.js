@@ -53,8 +53,13 @@ const Tasks = () => {
         }).then(()=>loadTasks())
     }
 
-    const updateTask = (task) =>{
-        
+    const updateTask = (id, name) =>{
+        const requestOptions = {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: name })
+        }
+        fetch(`http://localhost:8000/tasks/${id}/`, requestOptions).then(()=>loadTasks())
         
     }
 
