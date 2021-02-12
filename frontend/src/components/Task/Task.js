@@ -19,14 +19,13 @@ const Task = ({ task, index, toggleTask, deleteTask }) => {
                 <div className={Style.nameInnerContainer}>
                     <div>{task.name}</div>
                     <div className={Style.timeContainer}>
-                        <div>added: {moment(task.added, "YYYY-MM-DDTHH:mm:ss.SSSSSSZ").fromNow()}</div>
-                        <div>modified: {moment(task.modified, "YYYY-MM-DDTHH:mm:ss.SSSSSSZ").fromNow()}</div>
+                        <div>added: {moment(task.added, "YYYY-MM-DDTHH:mm:ss.SSSSSSZ").fromNow()}, &nbsp;</div>
+                        <div> modified: {moment(task.modified, "YYYY-MM-DDTHH:mm:ss.SSSSSSZ").fromNow()}</div>
                     </div>
-
                 </div>
                 <div className={Style.closeButton} onClick={()=>deleteTask(task.id)}>
                     <IconContext.Provider value={{ className: "closeButton" }}>
-                        <FaTrashAlt/>
+                        <FaTrashAlt className={Style.closeButton}/>
                     </IconContext.Provider>
                 </div>
             </div>

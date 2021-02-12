@@ -8,7 +8,7 @@
 
 .taskNameContainer{
     width: 100%;
-    margin-left: 10px;
+    margin-left: 30px;
     display: flex;
     justify-content: space-between;
 }
@@ -24,6 +24,13 @@
 
 .closeButton{
     color: purple;
+    width: 20px;
+    height: 20px;
+}
+
+.nameInnerContainer{
+    width: 100%;
+    text-align: start;
 }
 
 .nameInnerContainer *{
@@ -31,7 +38,6 @@
 
 .timeContainer{
     display: flex;
-    flex-direction: column;
 }
 
 .timeContainer *{
